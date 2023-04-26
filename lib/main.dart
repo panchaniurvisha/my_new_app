@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/plugin/multiple_video.dart';
+import 'package:my_app/media_query_one.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,6 @@ class MyApp extends StatelessWidget {
             //fontFamily: ''Dancing Script',
             primarySwatch: Colors.blue),
         debugShowCheckedModeBanner: false,
-        home: const MultipleVideo());
+        home: const MediaQueryOne());
   }
 }

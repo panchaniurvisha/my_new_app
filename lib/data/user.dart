@@ -1,7 +1,7 @@
-Map<String, dynamic> userdata = {
-  "companyName": "Tata",
-  "EstablishedOfCompany": "1919",
-  "Founder_of_company": "Jamsetji Nusserwanji Tata",
+Map<String, dynamic> userData = {
+  "company_Name": "Tata",
+  "established_Of_Company": "1919",
+  "founder_of_company": "Jamsetji Nusserwanji Tata",
   "chairman_of_company": "N Chandrasekaran",
   "information_about_company": [
     {

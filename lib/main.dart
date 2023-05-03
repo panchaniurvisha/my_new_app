@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/toast_example.dart';
+import 'package:my_app/model_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,6 @@ class MyApp extends StatelessWidget {
             //fontFamily: ''Dancing Script',
             primarySwatch: Colors.blue),
         debugShowCheckedModeBanner: false,
-        home: const ToastExample());
+        home: const ModelScreen());
   }
 }

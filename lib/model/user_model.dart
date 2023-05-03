@@ -14,11 +14,12 @@ class UserModel {
   });
 
   UserModel.fromJson(Map<String, dynamic> json) {
-    companyName = json["companyName"];
-    establishedOfCompany = json["establishedOfCompany"];
-    founderOfCompany = json["founderOfCompany"];
-    chairmanOfCompany = json["chairmanOfCompany"];
-    informationAboutCompany = (json["informationAboutCompany"] as List)
+    //fromJson named constructor work of initialising variables
+    companyName = json["company_Name"];
+    establishedOfCompany = json["established_Of_Company"];
+    founderOfCompany = json["founder_of_company"];
+    chairmanOfCompany = json["chairman_of_company"];
+    informationAboutCompany = (json["information_about_company"] as List)
         .map((value) => Company.fromJson(value))
         .toList();
   }
@@ -36,7 +37,7 @@ class Company {
   });
 
   Company.fromJson(Map<String, dynamic> json) {
-    headquarters = json[" headquarters"];
+    headquarters = json["headquarters"];
     brand = json["brand"];
     number = json["number"];
   }

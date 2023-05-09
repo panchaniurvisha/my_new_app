@@ -11,7 +11,7 @@ class SharePreference extends StatefulWidget {
 class _SharePreferenceState extends State<SharePreference> {
   final nameController = TextEditingController();
   static const String keyName = "name";
-  var nameValue = "No Value Saved";
+  var nameValue = "No Value Saved"; //variable declare for update
 
   @override
   void initState() {
@@ -42,6 +42,8 @@ class _SharePreferenceState extends State<SharePreference> {
               onPressed: () async {
                 var prefers = await SharedPreferences.getInstance();
                 prefers.setString(keyName, nameController.text.toString());
+
+                ///prefers add
               },
               child: const Text("save")),
           const SizedBox(

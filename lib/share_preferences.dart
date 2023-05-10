@@ -23,7 +23,7 @@ class _SharePreferenceState extends State<SharePreference> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sharepreference"),
+        title: const Text("Share_Preference"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -50,6 +50,13 @@ class _SharePreferenceState extends State<SharePreference> {
             height: 11,
           ),
           Text(nameValue),
+          ElevatedButton(
+              onPressed: () async {
+                var prefers = await SharedPreferences.getInstance();
+                prefers.clear();
+                //prefers.remove(keyName);
+              },
+              child: const Text("Delete Store Data")),
         ],
       ),
     );

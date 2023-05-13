@@ -6,7 +6,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class LocalStorage extends StatefulWidget {
   const LocalStorage({Key? key}) : super(key: key);
-
   @override
   State<LocalStorage> createState() => _LocalStorageState();
 }
@@ -19,14 +18,8 @@ class _LocalStorageState extends State<LocalStorage> {
   double decimal = 50.10;
   String action = "";
   List<String> items = [];
-  Map<String, dynamic> data = {
-    "name": "Urvashi",
-    "number": 10,
-    "class": 'first',
-    "year": 24
-  };
-  String encodeMap = json.encode(["data"]);
-
+  Map<String, dynamic> data = {"name": "Urvashi", "number": 10, "class": 'first', "year": 24};
+  Map<String, dynamic> decodeMap = {};
   createInstance() async {
     prefs = await SharedPreferences.getInstance();
   }
@@ -42,9 +35,8 @@ class _LocalStorageState extends State<LocalStorage> {
     prefs!.setBool(Constant.repeat, true);
     prefs!.setDouble(Constant.decimal, 20.50);
     prefs!.setString(Constant.action, "start");
-    prefs!.setStringList(
-        Constant.items, <String>["Sunday", "Monday", "Tuesday", "Wednesday"]);
-    prefs!.setString(Constant.encodeMap, encodeMap);
+    prefs!.setStringList(Constant.items, <String>["Sunday", "Monday", "Tuesday", "Wednesday"]);
+    prefs!.setString(Constant.information, jsonEncode(data));
     debugPrint("Data is Set---->");
   }
 
@@ -54,9 +46,9 @@ class _LocalStorageState extends State<LocalStorage> {
     action = prefs!.getString(Constant.action)!;
     decimal = prefs!.getDouble(Constant.decimal)!;
     items = prefs!.getStringList(Constant.items)!;
-    encodeMap = prefs!.getString(Constant.encodeMap)!;
-    Map<dynamic, String> decodeMap = jsonDecode(encodeMap)!;
+    String encodeMap = prefs!.getString(Constant.information)!;
 
+    decodeMap = jsonDecode(encodeMap)!;
     setState(() {});
 
     debugPrint("Data is get---->$count");
@@ -84,14 +76,12 @@ class _LocalStorageState extends State<LocalStorage> {
             ElevatedButton(onPressed: getData, child: const Text("Get Data")),
             Text(
                 "Count:$count"
-                "\nrepeat:$repeat"
-                "\naction:$action"
-                "\ndecimal:$decimal"
-                "\nitems:$items",
-                style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold)),
+                    "\nrepeat:$repeat"
+                    "\naction:$action"
+                    "\ndecimal:$decimal"
+                    "\nitems:$items"
+                    "\ndecodeMap:$decodeMap",
+                style: const TextStyle(fontSize: 20, color: Colors.black87, fontWeight: FontWeight.bold)),
           ],
         ),
       ),

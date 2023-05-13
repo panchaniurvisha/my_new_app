@@ -5,5 +5,5 @@ class Constant {
   static const String decimal = "decimal";
   static const String action = "action";
   static const String items = "items";
-  static const String encodeMap = "encodeMap";
+  static const String information = "information";
 }

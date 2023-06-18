@@ -104,12 +104,13 @@ class _ButtonScreenState extends State<ButtonScreen> {
             Column(
                 children: radioListOfData
                     .map((data) => RadioListTile(
-                          subtitle: Text("${radioListOfData}"),
-                          title: Text("${radioListOfData}"),
-                          value: radioData,
-                          groupValue: radioData,
+                          subtitle: Text(data["name"]),
+                          title: Text(data["color"]),
+                          value: data["index"],
+                          groupValue: radioListData,
                           onChanged: (value) {
-                            radioData = false;
+                            radioListData = value;
+                            setState(() {});
                           },
                         ))
                     .toList()),

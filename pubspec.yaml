@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   image_picker: ^0.8.7+3
   video_player: ^2.6.1
+  cropperx: ^1.1.1
   fluttertoast: ^8.2.1
   shared_preferences: ^2.1.1
 

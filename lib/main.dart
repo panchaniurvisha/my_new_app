@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/button_screen.dart';
+import 'package:my_app/oriention/device_orientation_screen.dart';
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations(
+  //         [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
+  //     .then((value) => runApp(const MyApp()));
   runApp(const MyApp());
 }
 
@@ -15,6 +19,6 @@ class MyApp extends StatelessWidget {
             //fontFamily: ''Dancing Script',
             primarySwatch: Colors.blue),
         debugShowCheckedModeBanner: false,
-        home: const ButtonScreen());
+        home: const DeviceOrientationScreen());
   }
 }

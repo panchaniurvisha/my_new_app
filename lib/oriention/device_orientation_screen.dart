@@ -10,7 +10,14 @@ class DeviceOrientationScreen extends StatefulWidget {
 }
 
 class _DeviceOrientationScreenState extends State<DeviceOrientationScreen> {
-  bool screenRotation = false;
+  //bool screenRotation = false;
+  List<DeviceOrientation> orientations = [
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.landscapeRight,
+  ];
+  int currentOrientationIndex = 0;
   @override
   void initState() {
     // TODO: implement initState
@@ -38,13 +45,18 @@ class _DeviceOrientationScreenState extends State<DeviceOrientationScreen> {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              screenRotation == false
-                  ? SystemChrome.setPreferredOrientations(
-                      [DeviceOrientation.landscapeRight])
-                  : SystemChrome.setPreferredOrientations(
-                      [DeviceOrientation.portraitUp]);
+              // screenRotation == false
+              //  ? SystemChrome.setPreferredOrientations(
+              //  [DeviceOrientation.landscapeRight])
+              // : SystemChrome.setPreferredOrientations(
+              //  [DeviceOrientation.portraitUp]);
+              final nextOrientationIndex =
+                  (currentOrientationIndex + 1) % orientations.length;
+              SystemChrome.setPreferredOrientations(
+                  [orientations[nextOrientationIndex]]);
+
               setState(() {
-                screenRotation = !screenRotation;
+                currentOrientationIndex = nextOrientationIndex;
               });
             },
             child: const Text("Rotate the screen")),

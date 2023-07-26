@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/oriention/device_orientation_screen.dart';
+
+import 'local_storage.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +20,6 @@ class MyApp extends StatelessWidget {
             //fontFamily: ''Dancing Script',
             primarySwatch: Colors.blue),
         debugShowCheckedModeBanner: false,
-        home: const DeviceOrientationScreen());
+        home: const LocalStorage());
   }
 }

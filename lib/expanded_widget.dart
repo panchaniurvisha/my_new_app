@@ -18,7 +18,12 @@ class _ExpandedWidgetState extends State<ExpandedWidget> {
         child: Row(
           children: [
             Container(
-              color: Colors.black,
+              color: Colors.yellow,
+              height: 200,
+              width: 100,
+            ),
+            Container(
+              color: Colors.greenAccent,
               height: 200,
               width: 100,
             ),
@@ -29,14 +34,6 @@ class _ExpandedWidgetState extends State<ExpandedWidget> {
                 height: 200,
               ),
             ),
-            Expanded(
-              //flex: 50,
-              child: Container(
-                color: Colors.greenAccent,
-                height: 200,
-                //margin: const EdgeInsets.all(12),
-              ),
-            )
           ],
         ),
       ),

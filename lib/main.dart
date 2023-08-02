@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'local_storage.dart';
+import 'expanded_widget.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +20,6 @@ class MyApp extends StatelessWidget {
             //fontFamily: ''Dancing Script',
             primarySwatch: Colors.blue),
         debugShowCheckedModeBanner: false,
-        home: const LocalStorage());
+        home: const ExpandedWidget());
   }
 }

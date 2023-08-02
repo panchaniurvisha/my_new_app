@@ -36,6 +36,12 @@ class _SharePreferenceScreenTwoState extends State<SharePreferenceScreenTwo> {
         TextField(
           controller: nameController,
           decoration: InputDecoration(
+            prefixIcon: IconButton(
+              icon: Icon(Icons.save),
+              onPressed: () {
+                prefs!.setString(keyName, nameController.text);
+              },
+            ),
             suffixIcon: IconButton(
               icon: Icon(Icons.delete),
               onPressed: () {
@@ -46,12 +52,6 @@ class _SharePreferenceScreenTwoState extends State<SharePreferenceScreenTwo> {
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(21)),
           ),
         ),
-        OutlinedButton(
-            onPressed: () {
-              prefs!.setString(keyName, nameController.text);
-            },
-            child: const Text("save",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16))),
         OutlinedButton(
             onPressed: () {
               var getName = prefs!.getString(keyName);

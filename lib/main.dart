@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'expanded_widget.dart';
+import 'package:my_app/sharepreference_screen_two.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +19,6 @@ class MyApp extends StatelessWidget {
             //fontFamily: ''Dancing Script',
             primarySwatch: Colors.blue),
         debugShowCheckedModeBanner: false,
-        home: const ExpandedWidget());
+        home: const SharePreferenceScreenTwo());
   }
 }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Flexibal extends StatefulWidget {
-  const Flexibal({Key? key}) : super(key: key);
+class FlexibleScreen extends StatefulWidget {
+  const FlexibleScreen({Key? key}) : super(key: key);
 
   @override
-  State<Flexibal> createState() => _FlexibalState();
+  State<FlexibleScreen> createState() => _FlexibleScreenState();
 }
 
-class _FlexibalState extends State<Flexibal> {
+class _FlexibleScreenState extends State<FlexibleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +38,7 @@ class _FlexibalState extends State<Flexibal> {
                   style: TextStyle(fontSize: 30.0),
                 ))),
           ),
+
           /*Flexible(
             fit: FlexFit.loose,
             child: Container(

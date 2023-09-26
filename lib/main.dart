@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/sharepreference_screen_two.dart';
+import 'package:my_app/spread_operator_in_listview.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +19,6 @@ class MyApp extends StatelessWidget {
             //fontFamily: ''Dancing Script',
             primarySwatch: Colors.blue),
         debugShowCheckedModeBanner: false,
-        home: const SharePreferenceScreenTwo());
+        home: const SpreadOperatorInListView());
   }
 }

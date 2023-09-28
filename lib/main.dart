@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/spread_operator_in_listview.dart';
+import 'package:my_app/silver_appbar_silver_list.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -14,11 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-            //fontFamily: ''Dancing Script',
-            primarySwatch: Colors.blue),
-        debugShowCheckedModeBanner: false,
-        home: const SpreadOperatorInListView());
+      title: 'Flutter Demo',
+      theme: ThemeData(
+          //fontFamily: ''Dancing Script',
+          primarySwatch: Colors.blue),
+      debugShowCheckedModeBanner: false,
+      home: const SilverSppBarSilverList(),
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/silver_appbar_silver_list.dart';
+
+import 'button_screen.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -14,12 +15,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-          //fontFamily: ''Dancing Script',
-          primarySwatch: Colors.blue),
-      debugShowCheckedModeBanner: false,
-      home: const SilverSppBarSilverList(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+            //fontFamily: ''Dancing Script',
+            primarySwatch: Colors.blue),
+        debugShowCheckedModeBanner: false,
+        home: const ButtonScreen());
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'button_screen.dart';
+import 'package:my_app/table_screen.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +19,6 @@ class MyApp extends StatelessWidget {
             //fontFamily: ''Dancing Script',
             primarySwatch: Colors.blue),
         debugShowCheckedModeBanner: false,
-        home: const ButtonScreen());
+        home: TableScreen());
   }
 }
